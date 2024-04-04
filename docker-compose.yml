@@ -1,6 +1,13 @@
 version: "3.7"
 
 services:
+  postgres:
+    container_name: test_postgres
+    restart: always
+    image: postgres:11.1
+    ports:
+      - 5432
+
   test_app:
     container_name: test_app
     restart: always
